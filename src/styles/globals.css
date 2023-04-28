@@ -2,26 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #F4F8FD;
+}
+
+.bg-color {
+  background: linear-gradient(to bottom, #102B52, #006FBC);
+}
+
+.success {
+  background: linear-gradient(90deg, #006FBC -1.11%, #7F43FF 97.46%);
+}
+
+a {
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  background-color: #f8f5f5;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  outline: none;
+}
+
+.no-placeholder::-webkit-input-placeholder {
+  visibility: hidden;
+}
+
+.no-placeholder:-moz-placeholder {
+  visibility: hidden;
+}
+
+.no-placeholder::-moz-placeholder {
+  visibility: hidden;
+}
+
+.no-placeholder:-ms-input-placeholder {
+  visibility: hidden;
+}
+
+.active {
+  transform: rotate(90deg);
+}
+
+.shown {
+  transform: rotate(7deg);
+  width: 3px;
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  height: 24px;
+  background-color: #9C9C9C;
 }
